@@ -5,6 +5,7 @@ import java.util.Scanner;
 /*
 Lesson_02 (GB.Java 1)
 Denisenko Dmitrii (10.09.2021)
+add leapYear (13.09.2021)
  */
 public class Lesson_02 {
     private static Scanner scanner = new Scanner(System.in);
@@ -13,6 +14,7 @@ public class Lesson_02 {
         checkSumm10_20();
         positiveOrNegative();
         repeatString();
+        leapYear();
     }
 
     static void checkSumm10_20() {
@@ -48,6 +50,20 @@ public class Lesson_02 {
         int amount = scanner.nextInt();
         for (int i = 0; i < amount; i++) {
             System.out.println(text);
+        }
+    }
+
+    static void leapYear() {
+        System.out.println("Введите год:");
+        int year = scanner.nextInt();
+        if ((year % 400) == 0) {
+            System.out.println("Год високосный");
+        } else if ((year % 100) == 0) {
+            System.out.println("Год НЕ високосный");
+        } else if ((year % 4) == 0) {
+            System.out.println("Год високосный");
+        } else {
+            System.out.println("Год НЕ високосный");
         }
     }
 }

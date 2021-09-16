@@ -12,58 +12,59 @@ public class Lesson_03 {
 
     public static void main(String[] args) {
         System.out.println(" Задание 1 ");
-        createArray();
+        createArray(10);
         System.out.println(" Задание 2 ");
         createArray100();
         System.out.println(" Задание 3 ");
         multiplyLessThen_6();
         System.out.println(" Задание 4 ");
-        arrayDiagonal();
+        arrayDiagonal(7);
         System.out.println(" Задание 5 ");
         arrayWithLen(3, 3);
         System.out.println(" Задание 6 ");
         arrayMaxMin();
+        System.out.println(" Задание 7 ");
+        checkArray(10);
     }
 
-    static void createArray() {
-        int array1[] = new int[10];
-        for (int i = 0; i < array1.length; i++) {
-            array1[i] = random.nextInt(2);
+    static void createArray(int size) {
+        int array[] = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(2);
         }
-        System.out.println(Arrays.toString(array1));
-        for (int i = 0; i < array1.length; i++) {
-            int a = (array1[i] == 0) ? 1 : 0;
-            array1[i] = a;
+        System.out.println(Arrays.toString(array));
+        for (int i = 0; i < array.length; i++) {
+            int a = (array[i] == 0) ? 1 : 0;
+            array[i] = a;
         }
-        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array));
     }
 
     static void createArray100() {
-        int array2[] = new int[100];
-        for (int i = 0; i < array2.length; i++) {
-            array2[i] = i + 1;
+        int array[] = new int[100];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
         }
-        System.out.println(Arrays.toString(array2));
+        System.out.println(Arrays.toString(array));
     }
-
 
     static void multiplyLessThen_6() {
-        int array3[] = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        System.out.println(Arrays.toString(array3));
-        for (int i = 0; i < array3.length; i++) {
-            int a = (array3[i] <= 6) ? array3[i] * 2 : array3[i];
-            array3[i] = a;
+        int array[] = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        System.out.println(Arrays.toString(array));
+        for (int i = 0; i < array.length; i++) {
+            int a = (array[i] <= 6) ? array[i] * 2 : array[i];
+            array[i] = a;
         }
-        System.out.println(Arrays.toString(array3));
+        System.out.println(Arrays.toString(array));
     }
 
-    static void arrayDiagonal() {
-        int array4[][] = new int[5][5];
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0, k = array4[i].length - 1; j < 5; j++, k--) {
+    static void arrayDiagonal(int size) {
+        int array[][] = new int[size][size];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0, k = array[i].length - 1; j < array.length; j++, k--) {
                 if (i == j || i == k) {
-                    array4[i][j] = 1;
-                    System.out.print(array4[i][j] + " ");
+                    array[i][j] = 1;
+                    System.out.print(array[i][j] + " ");
                 } else
                     System.out.print("0 ");
             }
@@ -72,33 +73,61 @@ public class Lesson_03 {
     }
 
     static void arrayWithLen(int len, int initialValue) {
-        int array5[] = new int[len];
-        for (int i = 0; i < array5.length; i++) {
-            array5[i] = initialValue;
+        int array[] = new int[len];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = initialValue;
         }
-        System.out.println(Arrays.toString(array5));
+        System.out.println(Arrays.toString(array));
     }
 
     static void arrayMaxMin() {
-        int array6[] = new int[20];
-                for (int i = 0; i < array6.length; i++) {
-            array6[i] = random.nextInt(31);
+        int array[] = new int[20];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(31);
         }
-        System.out.println(Arrays.toString(array6));
-        int max = array6[0];
-        int min = array6[0];
-        for (int i = 0; i < array6.length; i++) {
-            if (array6[i] < min) {
-                min = array6[i];
+        System.out.println(Arrays.toString(array));
+        int max = array[0];
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
             }
         }
-        for (int i1 = 0; i1 < array6.length; i1++) {
-            if (array6[i1] > max) {
-                max = array6[i1];
+        for (int i1 = 0; i1 < array.length; i1++) {
+            if (array[i1] > max) {
+                max = array[i1];
             }
         }
         System.out.println("Максимальное значение: " + max);
         System.out.println("Минимальное значение: " + min);
+    }
+
+    static void checkArray(int size) {
+        int array[] = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(2);
+        }
+        System.out.println(Arrays.toString(array));
+        // тестовый массив int array1[] = {1,1,1,1,0,0,1,1,1,1};
+        int left = 0;
+        int right = 0;
+        int total = 0;
+        String checkBalance = "false";
+
+        for (int i = 0; i < array.length; i++) {
+            total = total + array[i];
+        }
+        right = total;
+        for (int i = 0; i < array.length; i++) {
+            right = right - array[i];
+            left = left + array[i];
+            if (left == right) {
+                checkBalance = "true";
+                System.out.println("Border between array[" + i + "] and array[" + (i + 1) + "]");
+                break;
+            }
+        }
+        System.out.println(checkBalance);
     }
 }
 

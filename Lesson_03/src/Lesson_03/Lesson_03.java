@@ -61,7 +61,7 @@ public class Lesson_03 {
     static void arrayDiagonal(int size) {
         int array[][] = new int[size][size];
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0, k = array[i].length - 1; j < array.length; j++, k--) {
+            for (int j = 0, k = array.length - 1; j < array.length; j++, k--) {
                 if (i == j || i == k) {
                     array[i][j] = 1;
                     System.out.print(array[i][j] + " ");

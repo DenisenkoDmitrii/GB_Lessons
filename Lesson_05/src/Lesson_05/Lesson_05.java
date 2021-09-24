@@ -4,7 +4,7 @@ public class Lesson_05 {
 
     public static void main(String[] args) {
         Employee employeesArray[] = new Employee[5];
-        employeesArray[0] = new Employee("Ivanov Ivan", "Engineer", "ivivan@mailbox.com", "892312312",
+        employeesArray[0] = new Employee("Ivanov Ivan", "Developer", "ivivan@mailbox.com", "892312312",
                 30000, 30);
         employeesArray[1] = new Employee("Petrov Ivan", "HR-manager", "Petrov@mailbox.com", "892354825",
                 40000, 41);

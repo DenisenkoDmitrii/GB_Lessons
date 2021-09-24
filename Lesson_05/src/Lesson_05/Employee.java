@@ -21,6 +21,14 @@ public class Employee {
         return age;
     }
 
+    public String getPosition() {
+        return position;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
     @Override
     public String toString() {
         return "ФИО: " + fullName + ", должность: " + position + ", email: " + email +

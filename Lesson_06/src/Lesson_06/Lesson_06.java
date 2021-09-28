@@ -1,5 +1,8 @@
 package Lesson_06;
-
+/*
+Lesson_06 (GB.Java 1)
+Denisenko Dmitrii (24.09.2021)
+ */
 public class Lesson_06 {
 
     public static void main(String[] args) {

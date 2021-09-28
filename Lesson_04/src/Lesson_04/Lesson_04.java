@@ -1,5 +1,8 @@
 package Lesson_04;
-
+/*
+Lesson_04 (GB.Java 1)
+Denisenko Dmitrii (17.09.2021)
+ */
 import java.util.Random;
 import java.util.Scanner;
 

@@ -10,7 +10,7 @@ public abstract class Animal implements IAnimal {
     }
 
     public void run(int runDistance) {
-        if (runDistance <= runDistanceLimit && runDistanceLimit !=0 && runDistance != 0) {
+        if (runDistance <= runDistanceLimit && runDistanceLimit != 0 && runDistance != 0) {
             System.out.println(name + " пробежал: " + runDistance + " метров");
         } else if (runDistance == 0 && runDistanceLimit == 0) {
             System.out.println(name + " не начинал бегать");

@@ -10,7 +10,7 @@ public class Member {
         this.memberDistanseLimit = memberDistanseLimit;
     }
 
-    public void memberInfo(){
+    public void memberInfo() {
         System.out.println("Имя: " + memberName + ", пробегает " + memberDistanseLimit + " м.");
     }
 }

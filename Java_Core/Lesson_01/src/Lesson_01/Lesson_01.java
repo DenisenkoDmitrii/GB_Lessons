@@ -1,7 +1,7 @@
 package Lesson_01;
 
 /*
-Lesson_07 (GB.Java Core)
+Lesson_01 (GB.Java Core)
 Denisenko Dmitrii (19.10.2021)
  */
 public class Lesson_01 {
@@ -18,15 +18,15 @@ public class Lesson_01 {
         Course course1 = new Course(150, 130, 140);
 
         course1.runCourse(team_1);
-        System.out.println("\nКомманда 1 этажа : ");
+        System.out.println("\n" + team_1.teamName + ": ");
         team_1.teamInfo();
-        System.out.println("\nЧлены комманды 1 этажа, которые смогли завершить пробег дистанции ");
+        System.out.println("\nЧлены " + team_2.teamName + ", которые смогли завершить пробег дистанции ");
         team_1.teamInfoMembersFinished();
 
         course1.runCourse(team_2);
-        System.out.println("\nКомманда 2 этажа : ");
+        System.out.println("\n" + team_2.teamName + ": ");
         team_2.teamInfo();
-        System.out.println("\nЧлены комманды 2 этажа, которые смогли завершить пробег дистанции ");
+        System.out.println("\nЧлены " + team_2.teamName + ", которые смогли завершить пробег дистанции ");
         team_2.teamInfoMembersFinished();
     }
 }

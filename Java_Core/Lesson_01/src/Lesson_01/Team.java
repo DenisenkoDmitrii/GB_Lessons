@@ -16,9 +16,9 @@ public class Team {
         }
     }
 
-    public void teamInfoMembersFinished(){
+    public void teamInfoMembersFinished() {
         for (Member member : members_1) {
-            if(member.isFinished) {
+            if (member.isFinished) {
                 member.memberInfo();
             }
         }

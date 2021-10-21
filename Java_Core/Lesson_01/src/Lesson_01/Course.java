@@ -7,10 +7,10 @@ public class Course {
         distanse = new int[]{dist1, dist2, dist3};
     }
 
-    public void runCourse (Team team){
-        for(Member member : team.members_1){
-            for(int dist : distanse){
-                if(dist <= member.memberDistanseLimit){
+    public void runCourse(Team team) {
+        for (Member member : team.members_1) {
+            for (int dist : distanse) {
+                if (dist <= member.memberDistanseLimit) {
                     member.isFinished = true;
                 }
             }

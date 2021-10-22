@@ -1,7 +1,10 @@
 package Lesson_02;
 
 import java.util.Arrays;
-
+/*
+Lesson_02 (GB.Java Core)
+Denisenko Dmitriy (22.10.2021)
+ */
 public class Lesson_02 {
 
     public static void main(String[] args) {
@@ -23,6 +26,14 @@ public class Lesson_02 {
             mySum(arrayString);
             System.out.println("Массив с размером не 4х4\n");
             mySum(arrayString1);
+        } catch (MyArraySizeException e) {
+            e.printStackTrace();
+        } catch (MyArrayDataException e) {
+            e.printStackTrace();
+        }
+        try {
+            System.out.println("Правильный массив\n");
+            mySum(arrayString);
             System.out.println("Массив с символом\n");
             mySum(arrayString2);
 

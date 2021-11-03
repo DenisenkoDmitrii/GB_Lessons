@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Box<T extends Fruit> { //T extends Fruit - значит положить в коробки можно толкьо наследников фруктов,
     // плюс иначе не будет работать метод getWeight у наследников и " sum = sum + box.get(i).getWeight();" тут не надо делать приведение типа
+
     ArrayList<T> box = new ArrayList<>();
 
     public void addFruitsInBox(T t) {

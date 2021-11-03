@@ -23,7 +23,7 @@ public class Box<T extends Fruit> { //T extends Fruit - значит полож�
         return getWeight() == another.getWeight();
     }
 
-    public void boxShift(Box<T> another){
+    public void boxShift(Box<T> another) {
         for (T t : box) { //вариант for (int i=0; i < box.size(); i++) {another.addFruitsInBox(box.get(i));}
             another.addFruitsInBox(t);
         }

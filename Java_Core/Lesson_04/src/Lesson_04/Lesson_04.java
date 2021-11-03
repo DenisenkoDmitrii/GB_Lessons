@@ -51,6 +51,20 @@ public class Lesson_04 {
             }
         }
          */
+        // Посмотрел видео разбор задания, но менять своё не стал. т.к.:
+        // Реализовал таким образом (телефоны не записывал в ArrayList), т.к. из задания понял, что не у 1 человека будет 2-3 и более телефона,
+        // а что будет два разных человека, но с одинаковой фамилией и собственным телефоном уникальным.
+        // По принципу - авторизация на сайте по номеру телефона (уникального) а фамилии могут быть одинаковые, и задача в том, чтобы
+        // вывести телефоны однофамильцев
+        // В разобранном в видео примере (для себя памятка):
+        // HashMap<String, ArrayList<String>> phoneList = new HashMap<>();
+        // public void add(String name, String phone) { if (phoneList.get(name)==null)
+        // ArrayList<String> phones = new ArrayList<>();
+        // phones.add(phone)
+        // phoneList.put(name, phones)
+        // else {phoneList.get(name).add(phone)} - записывает телефон в существующий ArrayList phones
+        // public ArrayList<String> get(String name) { return phoneList.get(name)} - возвращает ArrayList phones по имени
+
         System.out.println("Задание № 2");
         PhoneList phoneList = new PhoneList();
         phoneList.add("89090909090", "Dima1");

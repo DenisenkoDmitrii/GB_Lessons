@@ -1,5 +1,8 @@
 package Lesson_07;
 
+import java.util.ArrayList;
+
+
 public class Headline {
     private String EffectiveDate;
     private float EffectiveEpochDate;
@@ -11,7 +14,8 @@ public class Headline {
     private String MobileLink;
     private String Link;
 
-
+    public Headline() {
+    }
     // Getter Methods
 
     public String getEffectiveDate() {
@@ -88,3 +92,4 @@ public class Headline {
         this.Link = Link;
     }
 }
+

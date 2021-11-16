@@ -7,7 +7,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import java.io.IOException;
+import java.io.*;
 
 // UVeqsaKSGNPJvBwkI1Fp4uMMd62mHTL5
 // 291310
@@ -65,6 +65,12 @@ public class WeatherResponse {
         Response response = okHttpClient.newCall(request).execute();
 
         String json = response.body().string();
+        File file = new File("weather.json");
+        try (PrintWriter out = new PrintWriter(file)) {
+            out.write(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return json;
     }

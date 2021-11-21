@@ -52,4 +52,31 @@ public class DbHandler {
         }
         return weatherList;
     }
+
+    public void deleteAllWeather() {
+        try (Statement statement = connection.createStatement()) {
+            statement.executeQuery("DELETE FROM Weather");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<Weather> findWeatherIn(String city) {
+        List<Weather> weatherList = new ArrayList<>();
+        try (Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM Weather WHERE city = '" + city + "'");
+            while (resultSet.next()) {
+                Weather weather = new Weather();
+                weather.city = resultSet.getString("city");
+                weather.localDate = resultSet.getString("localDate");
+                weather.weatherText = resultSet.getString("weatherText");
+                weather.temperature = resultSet.getDouble("temperature");
+                weatherList.add(weather);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return weatherList;
+    }
+
 }

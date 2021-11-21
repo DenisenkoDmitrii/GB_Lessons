@@ -28,6 +28,8 @@ public class Lesson_08 {
         //System.out.println(weather.toString());
         DbHandler dbHandler = new DbHandler();
         dbHandler.addWeather(weather);
+        //dbHandler.deleteAllWeather();
+        System.out.println(dbHandler.findWeatherIn("Volzhsky"));
         System.out.println(dbHandler.findAllWeather());
     }
 }

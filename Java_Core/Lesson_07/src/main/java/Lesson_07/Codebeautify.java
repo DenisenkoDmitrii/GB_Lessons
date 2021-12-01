@@ -2,8 +2,25 @@ package Lesson_07;
 
 import java.util.ArrayList;
 
+public class Codebeautify {
+    Headline Headline;
+    ArrayList< Object > DailyForecasts = new ArrayList < Object > ();
+    public Codebeautify(){};
 
-public class Headline {
+
+    // Getter Methods
+
+    public Headline getHeadline() {
+        return Headline;
+    }
+
+    // Setter Methods
+
+    public void setHeadline(Headline headline) {
+        this.Headline = headline;
+    }
+}
+class Headline {
     private String EffectiveDate;
     private float EffectiveEpochDate;
     private float Severity;
@@ -14,8 +31,8 @@ public class Headline {
     private String MobileLink;
     private String Link;
 
-    public Headline() {
-    }
+    public Headline(){};
+
     // Getter Methods
 
     public String getEffectiveDate() {
@@ -92,4 +109,3 @@ public class Headline {
         this.Link = Link;
     }
 }
-

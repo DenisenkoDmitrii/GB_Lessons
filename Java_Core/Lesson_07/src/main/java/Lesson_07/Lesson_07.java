@@ -27,10 +27,12 @@ public class Lesson_07 {
         System.out.println("Минимальная температура: " + tMIN + " С");
 
         //Вариант распарсить (не заработал)
-        //Headline codebeautify = objectMapper.readValue(new File("weather.json"), Headline.class);
-        //objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        //System.out.println("Volzhsky");
-        //System.out.println(codebeautify.getText());
+        /*ObjectMapper objectMapper = new ObjectMapper();
+        Codebeautify codebeautify = objectMapper.readValue(new File("weather.json"), Codebeautify.class);
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        System.out.println("Volzhsky");
+        System.out.println(codebeautify.getHeadline().getText());
+        */
 
 
     }

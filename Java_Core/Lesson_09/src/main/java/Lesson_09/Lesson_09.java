@@ -64,8 +64,8 @@ public class Lesson_09 {
 
         //Получаем 1 студента с максимальным количеством курсов и методом coursesCount() (вариант 1)
         System.out.println(students.stream()
-                .reduce((x1, x2) -> x1.coursesCount() > x2.coursesCount() ? x1 : x2));
-
+                .reduce((x1, x2) -> x1.coursesCount() > x2.coursesCount() ?));
+        x1 : x2
         //Получаем 3 студента с максимальным количеством курсов через courses.size() (вариант 2)
         students.stream()
                 .sorted((x1, x2) -> x2.courses.size() - x1.courses.size())

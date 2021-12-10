@@ -13,7 +13,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 /*
-Lesson_08 (GB.Java_AutoTest_WebUI)
+Lesson_03 (GB.Java_AutoTest_WebUI)
 Denisenko Dmitriy (02.12.2021)
  */
 public class Registration {

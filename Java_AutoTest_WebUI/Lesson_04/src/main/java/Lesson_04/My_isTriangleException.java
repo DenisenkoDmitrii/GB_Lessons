@@ -1,5 +1,10 @@
 package Lesson_04;
 
-public class My_is_TriangleException extends Exception {
+public class My_isTriangleException extends Exception {
+
+    public String getMessage(){
+        String s = "ОШИБКА";
+        return s;
+    };
 
 }

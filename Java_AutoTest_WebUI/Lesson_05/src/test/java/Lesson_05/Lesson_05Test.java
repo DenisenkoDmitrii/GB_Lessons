@@ -10,21 +10,19 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
+
 /*
 Lesson_05 (GB.Java_AutoTest_WebUI)
 Denisenko Dmitriy (15.12.2021)
  */
 public class Lesson_05Test {
-
-    // ДЗ 1:48
-    // Actions применить
-    // попробовать с окнами, кукис
 
     static WebDriver driver;
 
@@ -96,6 +94,30 @@ public class Lesson_05Test {
         driver.getTitle();
         assertEquals("Поделиться в WhatsApp", driver.getTitle());
         driver.navigate().back();
+        assertEquals("Главная - Волжский Дозор", driver.getTitle());
+    }
+
+    //============================Правила пользования ПДФ и Пользовательское соглашение doc - открываются в новых окнах=========================================
+    @Test
+    void twoNewWindows() {
+        driver.get("http://dozor.openvlz34.ru");
+        driver.findElement(By.xpath("/html/body/header/div[2]/div/div/button[1]")).click();
+        Actions actions = new Actions(driver);
+
+        actions
+                .click(driver.findElement(By.linkText("Правила пользования")))
+                .build()
+                .perform();
+        List<String> windowHandles = new ArrayList(driver.getWindowHandles());
+        assert (driver.getWindowHandles().size() == 2);
+        driver.switchTo().window(windowHandles.get(0));
+        assertEquals("Главная - Волжский Дозор", driver.getTitle());
+        actions
+                .click(driver.findElement(By.linkText("Пользовательское соглашение")))
+                .build()
+                .perform();
+        assert (driver.getWindowHandles().size() == 3);
+        driver.switchTo().window(windowHandles.get(0));
         assertEquals("Главная - Волжский Дозор", driver.getTitle());
     }
 }

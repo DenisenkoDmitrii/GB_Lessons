@@ -26,7 +26,7 @@ public class TriangleTest {
         assertEquals(6.928203230275509, triangle.getSquare());
     }
 
-    @Test//(expected = My_isTriangleException.class) не работает expected
+    @Test//(expected = My_isTriangleException.class) //не работает expected
     public void GetSquareTestException1() {
         Triangle triangle = new Triangle(-4, 4, 4);
         Throwable exception = null;

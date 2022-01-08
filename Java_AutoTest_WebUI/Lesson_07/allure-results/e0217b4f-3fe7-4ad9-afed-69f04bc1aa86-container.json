@@ -1,0 +1,1 @@
+{"uuid":"e0217b4f-3fe7-4ad9-afed-69f04bc1aa86","name":"watsAppJumpNewWindowAndReturn()","children":["7ef822aa-69cc-44bd-ac27-b9ea98ace1db"],"befores":[{"name":"openMainPage","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1641505655243,"stop":1641505658678}],"afters":[],"start":1641505655102,"stop":1641505666140}

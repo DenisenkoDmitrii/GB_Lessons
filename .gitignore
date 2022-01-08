@@ -1,7 +1,6 @@
 out
 .idea
+.allure
 *.iml
 _testStudy
 target
-
-

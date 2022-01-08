@@ -1,0 +1,1 @@
+{"uuid":"586b1cd1-9e97-498f-9b5b-b3d60a0002a9","name":"twoNewWindows()","children":["207aea47-8521-4fe7-83f2-49bba7ba6b61"],"befores":[{"name":"openMainPage","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1641669710547,"stop":1641669711443}],"afters":[],"start":1641669710539,"stop":1641669713366}

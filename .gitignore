@@ -4,3 +4,4 @@ out
 *.iml
 _testStudy
 target
+allure-results

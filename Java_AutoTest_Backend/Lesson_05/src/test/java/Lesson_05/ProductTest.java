@@ -79,5 +79,4 @@ public class ProductTest {
         assertThat(response.code(), CoreMatchers.is(500));
         //Тут ничего кроме 500 ошибки добится не удалось, в UI интерфейсе swagger - тоже постоянно ошибка 500 (http://80.78.248.82:8189/market/swagger-ui.html#/product-controller/getProductsUsingGET)
     }
-
 }

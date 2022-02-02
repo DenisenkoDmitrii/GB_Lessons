@@ -1,4 +1,4 @@
-package Lesson_05.util;
+package Lesson_06.util;
 
 import lombok.SneakyThrows;
 import lombok.experimental.UtilityClass;
